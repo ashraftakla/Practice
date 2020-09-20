@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Dashboard</title>
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1>Weather Dashboard</h1>
+    <div id="buttons-view"></div>
+
+    <form id="city-form">
+      <label for="city-input">Add a City</label>
+      <input type="text" id="city-input"><br>
+      <input id="add-city" type="submit" value="Add a City">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      var cities = ["Virginia", "Texas", "Florida", "New York"];
+      function renderButtons() {
+        $("#buttons-view").empty();
+        for (var i = 0; i < cities.length; i++) {
+          var a = $("<button>");
+          a.addClass("city");
+          a.attr("data-name", cities[i]);
+          a.text(cities[i]);
+          $("#buttons-view").append(a);
+        }
+      }
+
+      $("#add-city").on("click", function (event) {
+
+        event.preventDefault();
+
+        var city = $("#city-input").val().trim();
+        cities.push(city);
+        renderButtons();
+      });
+
+      renderButtons();
+    </script>
+  </div>
+</body>
+
+</html>

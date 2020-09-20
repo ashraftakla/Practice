@@ -1,0 +1,76 @@
+Write a function that takes in a string and outputs the number of vowels (not counting y).
+
+Ex:
+Input: "hello"
+Output: 2
+
+Input: "you are great!"
+Output: 6
+
+Input: "why?"
+Output: 0
+
+From alex_mitchell to Everyone:  06:10 PM
+Write a function that takes in an input and returns true if it’s an integer and false otherwise.
+
+Ex:
+Input: "7"
+Output: false
+
+Input: 7
+Output: true
+
+Input: 4.3
+Output: false
+From Taleh Aliyev to Everyone:  06:15 PM
+function isInteger(input) {
+    if ((typeof (input) == "number") && (Math.floor(input) == input)) return true;
+    else return false;
+}
+From logique to Everyone:  06:17 PM
+function isItInit(x){
+Var isItInit = Number.isInteger(x);
+Return isItInit;
+}
+
+consol.log(isItInit(12));
+From venus to Everyone:  06:17 PM
+function isInteger(number){
+        if(Math.floor(number)!=number){
+            return false;
+        }
+        return true;
+    }
+From Mongolmaa Gurbazar to Everyone:  06:18 PM
+function boolean(x) {
+        if (x === number) {
+          return true;
+        } else if (x === " ") {
+          return false;
+        }
+      }
+      boolean(7);
+From alex_mitchell to Everyone:  06:22 PM
+var isInt = function (input) {
+	return parseInt(input) === input;
+}
+var isInt = function (input) {
+	return Math.floor(input) === input;
+}
+!false
+!!variable
+var isInt = function (input) {
+	return !!Math.floor(input);
+}
+
+Write a function that takes an array of integers as an input and outputs the first duplicate.
+
+Ex:
+Input: [ 2, 5, 6, 3, 5 ]
+Output: 5
+
+Input: [ 1, 3, 4, 1, 3, 4 ]
+Output: 1
+
+Input: [ 2, 4, 5 ]
+Output: undefined
